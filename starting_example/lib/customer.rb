@@ -16,10 +16,7 @@ class Customer
 
     @rentals.each do |rental|
       # add frequent renter points
-      frequent_renter_points += 1
-      if rental.movie.price_code == Movie::NEW_RELEASE && rental.days_rented > 1
-        frequent_renter_points += 1
-      end
+      frequent_renter_points += rental.frequent_renter_points
 
       # add bonus for a two day new release rental
       result += "\t" + rental.movie.title + "\t" + rental.charge.to_s + "\n"
