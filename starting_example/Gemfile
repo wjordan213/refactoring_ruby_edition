@@ -5,6 +5,6 @@ group :test do
   # gem 'rspec-core'
   # gem 'rspec-expectations'
   gem 'simplecov'
-  gem 'pry', require: true
-  gem 'pry-byebug', require: true
+  gem 'pry', require: false
+  gem 'pry-byebug', require: false
 end
