@@ -40,4 +40,22 @@ describe Customer do
       expect(customer.statement).to eq(prepared_statement)
     end
   end
+
+  describe '#html_statement' do
+    let(:regular_rental_case1_stub) { Rental.new(movie: regular_movie, days_rented: 1) }
+    let(:prepared_statement) {
+      [
+        "<h1>Rentals for <em>Harris</em></h1><p>", "\tThe Land Before Time: 2<br>", "<p>You owe <em>2</em><p>",
+        "on this rental you earned <em>1</em> frequent renter points<p>"
+      ].join("\n")
+    }
+
+    before do
+      customer.add_rentals(regular_rental_case1_stub)
+    end
+
+    it 'prepares the correct statement' do
+      expect(customer.html_statement).to eq(prepared_statement)
+    end
+  end
 end

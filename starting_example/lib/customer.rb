@@ -25,6 +25,20 @@ class Customer
     result
   end
 
+  def html_statement
+    result = "<h1>Rentals for <em>#{@name}</em></h1><p>\n"
+    @rentals.each do |rental|
+      # show figures for this rental
+      result += "\t" + rental.movie.title + ": " +  rental.charge.to_s + "<br>\n"
+    end
+
+    # add footer lines
+    result += "<p>You owe <em>#{total_charge}</em><p>\n"
+    result += "on this rental you earned " +
+      "<em>#{total_frequent_renter_points}</em> " +
+      "frequent renter points<p>"
+  end
+
   private
 
   def total_frequent_renter_points
