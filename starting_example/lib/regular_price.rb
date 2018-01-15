@@ -1,0 +1,2 @@
+class RegularPrice
+end
