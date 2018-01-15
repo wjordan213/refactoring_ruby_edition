@@ -1,5 +1,5 @@
 describe Customer do
-  let(:regular_movie) { Movie.new(title: 'The Land Before Time', price_code: Movie::REGULAR)}
+  let(:regular_movie) { Movie.new(title: 'The Land Before Time', the_price_code: Movie::REGULAR)}
 
   let(:name) { "Harris" }
   let(:customer) { Customer.new(name: name) }
@@ -14,10 +14,10 @@ describe Customer do
     let(:regular_rental_case1_stub) { Rental.new(movie: regular_movie, days_rented: 1) }
     let(:regular_rental_case2_stub) { Rental.new(movie: regular_movie, days_rented: 3) }
 
-    let(:new_release_movie) { Movie.new(title: 'The Land Before Time', price_code: Movie::NEW_RELEASE )}
+    let(:new_release_movie) { Movie.new(title: 'The Land Before Time', the_price_code: Movie::NEW_RELEASE )}
     let(:new_rental_stub) { Rental.new(movie: new_release_movie, days_rented: 8) }
 
-    let(:childrens_movie) { Movie.new(title: "Some Children's movie", price_code: Movie::CHILDRENS)}
+    let(:childrens_movie) { Movie.new(title: "Some Children's movie", the_price_code: Movie::CHILDRENS)}
     let(:childrens_rental_case1_stub) { Rental.new(movie: childrens_movie, days_rented: 1) }
     let(:childrens_rental_case2_stub) { Rental.new(movie: childrens_movie, days_rented: 4) }
 

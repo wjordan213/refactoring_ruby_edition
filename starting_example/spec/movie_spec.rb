@@ -1,5 +1,5 @@
 describe Movie do
-  let(:regular_movie) { Movie.new(title: 'The Land Before Time', price_code: Movie::REGULAR)}
+  let(:regular_movie) { Movie.new(title: 'The Land Before Time', the_price_code: Movie::REGULAR)}
 
 
   it 'has readable attributes title and price_code' do
