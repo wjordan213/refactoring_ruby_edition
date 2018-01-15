@@ -1,5 +1,5 @@
 describe Rental do
-  let(:regular_movie) { Movie.new(title: 'The Land Before Time', the_price_code: Movie::REGULAR)}
+  let(:regular_movie) { Movie.new(title: 'The Land Before Time', price: RegularPrice.new)}
 
   let(:days_rented) { 12 }
   let(:rental) { Rental.new(movie: regular_movie, days_rented: 12) }
