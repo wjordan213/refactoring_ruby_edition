@@ -1,0 +1,2 @@
+Testing:
+  - Now I'm breaking out all of these classes. They have public interfaces that need to be tested, and they should also be stubbed. When I get through the example work, I'll implement the testing ideas layed out in Sandi Metz's Practical Object Oriented Design in Ruby and see how that plays out (stubbing, mocking, inheritance, roles and all that)
